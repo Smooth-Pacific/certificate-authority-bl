@@ -38,4 +38,5 @@ cat document.crt root.crt > document-chain-bundle.cert.pem
 echo "Generated document certificates"
 
 
-
+openssl verify -CAfile root.crt server.crt
+openssl verify -CAfile root.crt document.crt
